@@ -1,5 +1,9 @@
 # Ruby on Rails Tutorial sample application
 
+## Comand for cloud 9
+rails server -b $IP -p $PORT
+
+
 This is the sample application for
 [*Ruby on Rails Tutorial:
 Learn Web Development with Rails*](http://www.railstutorial.org/)
