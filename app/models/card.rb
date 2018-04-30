@@ -1,6 +1,8 @@
 require 'scryfall_api'
 
 class Card < ApplicationRecord
+  has_many :cardcollections
+  has_many :collections, through: :cardcollections
 
   def Card.search(name)
     api = ScryfallApi.new()
@@ -10,7 +12,7 @@ class Card < ApplicationRecord
   end
 
   private
-   
+  
     def self.parseName(resp)
       resp["data"][0]["name"].downcase
     end
