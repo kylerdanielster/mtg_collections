@@ -37,3 +37,15 @@ Card.create!(name:  "Card",
   Card.create!(name:  name,
                imageUri: imageUri)
 end
+
+users = User.order(:created_at).take(6)
+10.times do
+  name = Faker::Lorem.sentence(3)
+  users.each { |user| user.collections.create!(name: name, user_id: user.id) }
+end
+
+collections = Collection.all
+collections.each { |collection|
+  cards = Card.order("RANDOM()").limit(20)
+  cards.each { |card| Cardcollection.create!(card_id: card.id, collection_id: collection.id) }
+  }
