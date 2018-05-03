@@ -4,5 +4,9 @@
   <span class="name"><%= collection.name %></span>
   <span class="timestamp">
     Created <%= time_ago_in_words(collection.created_at) %> ago.
+    <% if current_user?(collection.user) %>
+      <%= link_to "delete", collection, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+    <% end %>
   </span>
 </li>

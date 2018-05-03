@@ -3,7 +3,6 @@ require 'test_helper'
 class CollectionTest < ActiveSupport::TestCase
   def setup
     @user = users(:kyle)
-    # This code is not idiomatically correct.
     @collection = @user.collections.build(name: "Lorem ipsum", user_id: @user.id)
   end
 
@@ -22,6 +21,6 @@ class CollectionTest < ActiveSupport::TestCase
   end
 
   test "order should be most recent first" do
-    assert_equal collections(:two), Collection.first
+    assert_equal collections(:collection_two), Collection.first
   end
 end
