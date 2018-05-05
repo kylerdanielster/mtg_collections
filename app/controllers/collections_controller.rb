@@ -5,7 +5,7 @@ class CollectionsController < ApplicationController
   def create
     @collection = current_user.collections.build(collection_params)
     if @collection.save
-      flash[:success] = "collection created!"
+      flash[:success] = "Collection created!"
       redirect_to root_url
     else
       @feed_items = []
@@ -22,7 +22,7 @@ class CollectionsController < ApplicationController
   private
 
     def collection_params
-      params.require(:collection).permit(:content)
+      params.require(:collection).permit(:name)
     end
 
     def correct_user

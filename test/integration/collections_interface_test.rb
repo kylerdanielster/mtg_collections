@@ -8,14 +8,15 @@ class CollectionsInterfaceTest < ActionDispatch::IntegrationTest
   test "collection interface" do
     log_in_as(@user)
     get root_path
-    #assert_select 'div.pagination'
+    # assert_select 'div.pagination' There are not enough collections 
+    # for this page to have pagination
     # Invalid submission
     assert_no_difference 'Collection.count' do
       post collections_path, params: { collection: { name: "" } }
     end
     assert_select 'div#error_explanation'
     # Valid submission
-    name = "This collection really ties the room together"
+    name = "Created Another collection"
     assert_difference 'Collection.count', 1 do
       post collections_path, params: { collection: { name: name } }
     end
