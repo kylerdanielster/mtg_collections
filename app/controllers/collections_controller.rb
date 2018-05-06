@@ -2,6 +2,11 @@ class CollectionsController < ApplicationController
   before_action :logged_in_user, only: [:create, :destroy]
   before_action :correct_user,   only: :destroy
 
+  def show
+    @collection = Collection.find(params[:id])
+    @cards = @collection.cards.paginate(page: params[:page])
+  end
+
   def create
     @collection = current_user.collections.build(collection_params)
     if @collection.save
