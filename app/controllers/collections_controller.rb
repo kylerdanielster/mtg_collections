@@ -4,7 +4,10 @@ class CollectionsController < ApplicationController
 
   def show
     @collection = Collection.find(params[:id])
-    @cards = @collection.cards.paginate(page: params[:page])
+    #@cards = @collection.cards.paginate(page: params[:page])
+    @card_collection = Cardcollection.where(
+      collection_id: @collection.id).pluck(:card_id)
+    @cards = Card.find(@card_collection)
   end
 
   def create
