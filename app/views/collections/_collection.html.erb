@@ -1,7 +1,6 @@
 <li id="collection-<%= collection.id %>">
   <%= link_to gravatar_for(collection.user, size: 50), collection.user %>
-  <span class="user"><%= link_to collection.user.name, collection.user %></span>
-  <span class="name"><%= collection.name %></span>
+  <span class="name"><%= link_to collection.name, collection %></span>
   <span class="timestamp">
     Created <%= time_ago_in_words(collection.created_at) %> ago.
     <% if current_user?(collection.user) %>

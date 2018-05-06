@@ -23,4 +23,8 @@ class CollectionTest < ActiveSupport::TestCase
   test "order should be most recent first" do
     assert_equal collections(:collection_two), Collection.first
   end
+
+  test "should get collection cards" do
+    
+  end
 end
