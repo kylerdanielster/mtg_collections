@@ -1,1 +1,4 @@
-Searching...
+<%= form_tag("/cards/search", method: "get") do %>
+  <%= text_field_tag(:name, "Card name...") %>
+  <%= submit_tag("Search", class: "btn btn-primary", remote: true) %>
+<% end %>

@@ -27,6 +27,14 @@ class CollectionsController < ApplicationController
     redirect_to request.referrer || root_url
   end
 
+  # def search
+  #   if params[:name]
+  #     @results = Card.search(params[:name])
+  #   else
+  #     flash[:info] = "No cards found"
+  #   end
+  # end
+
   private
 
     def collection_params
