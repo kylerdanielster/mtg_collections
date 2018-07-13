@@ -1,4 +1,6 @@
-<%= form_tag("/cards/search", method: "get") do %>
+<%= form_tag("/cards/show", method: "get", :id => "search_form", remote: true) do %>
   <%= text_field_tag(:name, "Card name...") %>
-  <%= submit_tag("Search", class: "btn btn-primary", remote: true) %>
+  <%= submit_tag("Search", class: "btn btn-primary") %>
 <% end %>
+
+<div id="cardResults"></div>
