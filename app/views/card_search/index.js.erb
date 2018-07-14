@@ -1,1 +1,1 @@
-$('#cardResults').html("<%= j render(@card) %>");
+$('#cardResults').html("<%= j render partial: 'shared/card_search_results', locals: {card: @card} %>");

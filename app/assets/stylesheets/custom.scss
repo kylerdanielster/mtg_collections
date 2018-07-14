@@ -238,7 +238,7 @@ input {
   }
 }
 
-/* microposts */
+/* collections */
 
 .collections {
   list-style: none;
@@ -291,5 +291,12 @@ span.picture {
   li {
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
+  }
+}
+
+#cardResults {
+  img {
+    width: 100%;
+    height: auto;
   }
 }
