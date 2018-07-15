@@ -27,13 +27,8 @@ class CollectionsController < ApplicationController
     redirect_to request.referrer || root_url
   end
 
-  # def search
-  #   if params[:name]
-  #     @results = Card.search(params[:name])
-  #   else
-  #     flash[:info] = "No cards found"
-  #   end
-  # end
+  # Edit should delete card? DELETE /collection/:id/card - @collection.cards.delete(@card)
+  # Update should add card? PUT /collection/:id/card - @collection.cards << @card
 
   private
 
