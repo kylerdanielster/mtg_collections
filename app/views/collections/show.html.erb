@@ -5,7 +5,7 @@
       <p><%= @collection.name %></p>
     </section>
     <section class="collection_form">
-      <%= render "shared/card_search_form" %>
+      <%= render "shared/card_search_form", locals: {collection_id: @collection.id} %>
     </section>
   </aside>
   <div class="col-md-8">
