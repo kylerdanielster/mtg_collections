@@ -4,7 +4,9 @@ class CardSearchController < ApplicationController
 
   def index
     if params[:name]
-      @card = Card.search(params[:name])
+      search_results = Card.search(params[:name])
+      @card = Card.find_or_create_by(name: search_results[:name],
+                                     imageUri: search_results[:imageUri])
     else
       flash[:info] = 'No cards found'
     end
