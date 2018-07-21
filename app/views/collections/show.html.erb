@@ -11,9 +11,9 @@
   <div class="col-md-8">
     <% if @collection.cards.any? %>
       <h3>Cards (<%= @collection.cards.count %>)</h3>
-      <ol class="cards">
+      <div class="cards">
         <%= render @cards %>
-      </ol>
+      </div>
     <% end %>
   </div>
 </div>

@@ -1,4 +1,6 @@
-<li id="card-<%= card.id %>">
+<div class="colCard" id="card-<%= card.id %>" >
   <%= image_tag card.imageUri if card.imageUri? %>
-  <span class="name"><%= card.name %></span>
-</li>
+  <a class="removeCardLink" href="">X</a>
+  <%= link_to "X", collection_card_path(@collection.id, card.id),
+              :class => "removeCardLink", method: :delete, remote: true %>
+</div>

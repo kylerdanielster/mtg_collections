@@ -81,6 +81,7 @@ footer {
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #777;
+  display:block;
 }
 
 footer a {
@@ -288,15 +289,35 @@ span.picture {
 .cards {
   list-style: none;
   padding: 0;
-  li {
-    padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
+
+}
+
+.colCard:first-of-type {
+  margin-top: 0;
+}
+
+.colCard {
+  margin-top: -350px;
+
+  img {
+    height: 390px;
+    width: auto;
   }
+}
+
+.removeCardLink {
+  position: absolute;
+  color: white;
+  left: 20px;
 }
 
 #cardResults {
   img {
-    width: 100%;
-    height: auto;
+    height: 390px;
+    width: auto;
+  }
+
+  .button_to {
+    padding-top: 1em;
   }
 }

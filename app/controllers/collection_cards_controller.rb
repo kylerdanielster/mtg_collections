@@ -6,4 +6,10 @@ class CollectionCardsController < ApplicationController
     @card = Card.find_by(id: params[:id])
     @collection.cards << @card
   end
+
+  def destroy
+    @collection = Collection.find_by(id: params[:collection_id])
+    @card = Card.find_by(id: params[:id])
+    @collection.cards.destroy(@card)
+  end
 end
