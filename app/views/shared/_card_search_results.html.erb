@@ -1,5 +1,3 @@
-<%= image_tag card.imageUri, class: "img_responsive" %>
-
-<!-- @card.id -->
-<%= button_to "Add Card", collection_card_path(@collection.id, @card.id), method: :put, remote: true, class: 'btn btn-primary' %>
-
+<%= image_tag card.imageUri, class: "resultsImage" %>
+<%= button_to "Add Card", collection_card_path(@collection.id, @card.id),
+              method: :put, remote: true, class: 'btn btn-primary' %>

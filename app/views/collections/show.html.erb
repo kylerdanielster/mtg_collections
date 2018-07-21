@@ -1,13 +1,11 @@
 <% provide(:title, @collection.name) %>
 <div class="row">
-  <aside class="col">
-    <section class="user_info">
+  <div class="col-6 cardSearchSection">
+    <div class="row">
       <p><%= @collection.name %></p>
-    </section>
-    <section class="collection_form">
+    </div>
       <%= render "shared/card_search_form", locals: {collection_id: @collection.id} %>
-    </section>
-  </aside>
+  </div>
   <div class="col">
     <% if @collection.cards.any? %>
       <h3>Cards (<%= @collection.cards.count %>)</h3>
