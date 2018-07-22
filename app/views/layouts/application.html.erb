@@ -11,7 +11,7 @@
   </head>
   <body>
     <%= render 'layouts/header' %>
-    <div class="container main">
+    <div class="container center main">
       <% flash.each do |message_type, message| %>
         <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
       <% end %>

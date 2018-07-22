@@ -1,5 +1,9 @@
-<div class="colCard" id="card-<%= card.id %>" >
+<div class="card colCard" id="card-<%= card.id %>" >
+  <div class="card-img">
   <%= image_tag(card.imageUri, :class => "rounded") if card.imageUri? %>
+  </div>
+  <div class="card-img-overlay">
   <%= link_to "X", collection_card_path(@collection.id, card.id),
               :class => "removeCardLink", method: :delete, remote: true %>
+  </div>
 </div>
