@@ -308,9 +308,8 @@ span.picture {
 
 #cardResults {
   img {
-    height: 360px;
-    width: auto;
-    margin-left: -25px;
+    height: auto;
+    width: 100%;
   }
 
   .button_to {
@@ -318,5 +317,6 @@ span.picture {
   }
 }
 
-.resultsImage {
+#search_form {
+  padding-left: 10px;
 }
