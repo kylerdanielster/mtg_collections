@@ -1,12 +1,12 @@
 <% provide(:title, @collection.name) %>
 <div class="row">
-  <div class="col col-md-4 col-sm-12">
+  <div class="col col-md-4 col-sm-12 col-12">
     <div class="row">
       <p><%= @collection.name %></p>
     </div>
       <%= render "shared/card_search_form", locals: {collection_id: @collection.id} %>
   </div>
-  <div class="col col-md-7 col-sm-12 cards">
+  <div class="col cards">
     <% if @collection.cards.any? %>
       <h3>Cards (<%= @collection.cards.count %>)</h3>
       <div class="card-columns">
