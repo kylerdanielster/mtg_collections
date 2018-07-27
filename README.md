@@ -1,6 +1,8 @@
 # Ruby on Rails MTG application
 Ths app is based on https://www.railstutorial.org/ 
 
+Try it out at https://desolate-reaches-18806.herokuapp.com/
+
 ## Comand for cloud 9
 rails server -b $IP -p $PORT
 
