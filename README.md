@@ -1,4 +1,5 @@
 # Ruby on Rails MTG application
+Ths app is based on https://www.railstutorial.org/ 
 
 ## Comand for cloud 9
 rails server -b $IP -p $PORT
