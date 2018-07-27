@@ -1,6 +1,6 @@
 class CardSearchController < ApplicationController
   before_action :get_current_collection, only: :index
-  respond_to :html, :js
+  respond_to :js
 
   def index
     if params[:name]
