@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   #get 'cards/show', to: 'cards#show'
-  get 'card_search', to: 'card_search#index'
+  get 'card_search', to: 'card_search#index', defaults: { format: 'js' }
 
   resources :users
   resources :account_activations, only: [:edit]
