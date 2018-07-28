@@ -1,6 +1,7 @@
 class CardSearchController < ApplicationController
   before_action :get_current_collection, only: :index
   respond_to :js, only: :index
+  skip_before_action :verify_authenticity_token
 
   def index
       if params[:name]
